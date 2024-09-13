@@ -1,0 +1,47 @@
+    // $collection = collect([
+    //     ['name' => 'Product 1', 'price' => 100],
+    //     ['name' => 'Product 2', 'price' => 150],
+    //     ['name' => 'Product 3', 'price' => 200]
+    // ]);
+    
+    // // $sum = $collection->sum('price');
+    
+    // // echo $collection; // Output: 450
+    // $users = collect(['John', 'Jane', 'Doe']);
+    // echo $users ."<br>";
+    // $usersArray = $users->all();
+    // foreach ($usersArray as $key => $value) {
+    //     echo $value. "/"."<br>";
+    // }
+    // $filtered = $users->filter(function ($name) {
+    //     return $name !== 'Doe';
+    // });
+    // echo $filtered ."...<br>";
+    // $users = collect([
+    //     ['name' => 'John', 'age' => 28],
+    //     ['name' => 'Jane', 'age' => 24]
+    // ]);
+    // echo $users."<br>";
+    // $names = $users->pluck('name'); // ['John', 'Jane']
+    // echo $names."<br>";
+    // $sum = collect([1, 2, 3])->reduce(function ($carry, $item) {
+    //     return $carry + $item;
+    // }); // 6
+    // echo $sum."<br>";
+    // $usersUppercase = $users->map(function ($name) {
+    //     return strtoupper($name);
+    // });
+    // echo $usersUppercase;
+        
+    // $contains = $users->contains('John'); // true
+
+
+
+    ------------------------------------------------
+    $task->completed = !$task->completed;
+    $task->save();
+    <td class="p-3 border"><a href="" @class(['line-through' =>  $task->completed ])>{{ $task->title }}</a></td>
+    <td class="p-3 border">{{ \Illuminate\Support\Str::words($task->description, 10, '...') }}</td>
+    <td class="p-3 border">{{ \Illuminate\Support\Str::words($task->long_description, 20, '...') }}</td>
+
+    ------------------------------------------------
